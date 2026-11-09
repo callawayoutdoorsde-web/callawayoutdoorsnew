@@ -27,6 +27,20 @@ for = "/js/*"
 [functions]
   directory = "netlify/functions"
 
+# Serve the inventory page at /inventory while keeping /inventory in the address bar.
+# Keep these BEFORE the /inventory/* camper-detail rewrite.
+[[redirects]]
+  from = "/inventory"
+  to = "/inventory.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/inventory/"
+  to = "/inventory.html"
+  status = 200
+  force = true
+
 # Live server-rendered camper pages: overrides old static HTML files.
 [[redirects]]
   from = "/inventory/*"
