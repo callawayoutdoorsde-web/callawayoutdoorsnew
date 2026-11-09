@@ -1,0 +1,39 @@
+CALLAWAY OUTDOORS — COMPLETE WEBSITE + GOOGLE REVIEWS DIAGNOSTIC
+
+This archive is FLAT at its root. index.html, netlify.toml, package.json,
+css/, js/, assets/, data/, inventory/, and netlify/ are ALL at the ZIP root.
+This fixes a common Netlify Page Not Found problem when the site's publish
+directory is "." but the website files are nested one folder too deep.
+
+IMPORTANT: This is the COMPLETE website, not just the Google Reviews function.
+It preserves the homepage, inventory, financing, design, images, and existing
+Netlify functions from the previous website release.
+
+GITHUB DEPLOYMENT (recommended for your existing webdesigntwo site):
+1. Extract this ZIP on your computer. Do NOT upload the ZIP file itself
+   to GitHub expecting GitHub to unpack it.
+2. On the MAIN branch of callaway-outdoors-website, put the extracted
+   CONTENTS at the REPOSITORY ROOT. index.html must be directly alongside
+   netlify.toml, not inside callaway-site-prototype or another folder.
+3. Replace old files of the same names. Do not accidentally leave an older
+   nested copy that Netlify could use instead.
+4. Commit changes and let Netlify build the connected repository.
+5. In Netlify webdesigntwo, check that the new deployment contains
+   index.html at the published root before publishing it.
+6. Keep GOOGLE_PLACES_API_KEY in Netlify environment variables. Never
+   paste the key into any public GitHub file.
+7. Test: https://webdesigntwo.netlify.app/.netlify/functions/google-reviews
+   It will show stage and Google error details if the API call fails.
+
+EXPECTED NETLIFY SETTINGS (netlify.toml controls these):
+  Base directory: blank (repository root)
+  Publish directory: .
+  Functions directory: netlify/functions
+  Build command: npm install --no-audit --no-fund
+
+If the site is already working on an older published deployment, keep that
+one live until you confirm the new deploy's homepage works.
+
+Google Places API (New) may return only a small subset of Google reviews.
+After debugging is complete, remove the temporary error diagnostics from
+the public endpoint.

@@ -1,0 +1,11 @@
+CALLAWAY OUTDOORS — DEALERCENTER AUTOMATIC INVENTORY
+
+This package includes 26 live-feed listings with DealerCenter photos and prices as of the supplied XML file.
+For AUTOMATIC updates, connect this website folder to a GitHub repository and deploy via Netlify's Git integration (not manual drag-and-drop). Netlify will install @netlify/blobs and deploy the serverless function at /api/inventory.
+The first request to /api/inventory retrieves the DealerCenter XML, and the Netlify Blobs snapshot refreshes after 24 hours on the next request. This is a 24-hour cache, refreshed ON DEMAND (not an exact midnight schedule).
+If the DealerCenter feed fails, the last good cached inventory is served. The function refuses unexpectedly small feeds to avoid wiping the catalog.
+The existing static data/inventory.json is a fallback snapshot for previews and temporary API failures. A manual drag-and-drop deploy DOES NOT enable the function; it will show only the snapshot.
+To test: after Git-based Netlify deployment, open https://YOUR-SITE.netlify.app/api/inventory and confirm a JSON array. Change a price in DealerCenter and check again after 24 hours.
+Static legacy unit URLs redirect to /unit.html?id=... so current prices and sold removals are shown; consider adding build-time SEO page generation later.
+Custom listing titles, tags, merchandising and spec library are preserved for matched stock. New stock receives generic titles and should be reviewed for custom tags/features.
+NOTE: the feed is a Facebook export; sold stock is inferred by absence, not explicit sold flags.

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.callaway-outdoors.com/sitemap.xml
