@@ -41,12 +41,8 @@ for = "/js/*"
   status = 200
   force = true
 
-# Live server-rendered camper pages: overrides old static HTML files.
-[[redirects]]
-  from = "/inventory/*"
-  to = "/.netlify/functions/rv-page?slug=:splat"
-  status = 200
-  force = true
+# Individual camper pages are handled directly by rv-page.mjs
+# using Netlify function config.path and context.params.slug.
 
 # Inventory sitemap reflects current DealerCenter stock, not the original 26-unit snapshot.
 [[redirects]]
