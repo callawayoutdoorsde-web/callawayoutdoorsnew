@@ -1,39 +1,30 @@
-CALLAWAY OUTDOORS — COMPLETE WEBSITE + GOOGLE REVIEWS DIAGNOSTIC
+CALLAWAY OUTDOORS — COMPLETE WEBSITE (LIVE CAMPER SEO FIX)
 
-This archive is FLAT at its root. index.html, netlify.toml, package.json,
-css/, js/, assets/, data/, inventory/, and netlify/ are ALL at the ZIP root.
-This fixes a common Netlify Page Not Found problem when the site's publish
-directory is "." but the website files are nested one folder too deep.
+This ZIP contains the ENTIRE current website with the latest Google indexing
+and DealerCenter feed corrections. It is NOT just a patch.
 
-IMPORTANT: This is the COMPLETE website, not just the Google Reviews function.
-It preserves the homepage, inventory, financing, design, images, and existing
-Netlify functions from the previous website release.
+GITHUB REPOSITORY: callawayoutdoorsde-web/callawayoutdoorsnew
+NETLIFY SITE: webdesigntwo
+PUBLIC DOMAIN: https://callaway-outdoors.com
 
-GITHUB DEPLOYMENT (recommended for your existing webdesigntwo site):
-1. Extract this ZIP on your computer. Do NOT upload the ZIP file itself
-   to GitHub expecting GitHub to unpack it.
-2. On the MAIN branch of callaway-outdoors-website, put the extracted
-   CONTENTS at the REPOSITORY ROOT. index.html must be directly alongside
-   netlify.toml, not inside callaway-site-prototype or another folder.
-3. Replace old files of the same names. Do not accidentally leave an older
-   nested copy that Netlify could use instead.
-4. Commit changes and let Netlify build the connected repository.
-5. In Netlify webdesigntwo, check that the new deployment contains
-   index.html at the published root before publishing it.
-6. Keep GOOGLE_PLACES_API_KEY in Netlify environment variables. Never
-   paste the key into any public GitHub file.
-7. Test: https://webdesigntwo.netlify.app/.netlify/functions/google-reviews
-   It will show stage and Google error details if the API call fails.
+SAFE DEPLOYMENT:
+1. Download this ZIP and extract it on your Windows computer.
+2. Open GitHub repo callawayoutdoorsde-web/callawayoutdoorsnew, main branch.
+3. Use Add file > Upload files. Drag ALL CONTENTS of the extracted folder
+   (index.html, netlify.toml, assets/, css/, js/, data/, inventory/, netlify/, etc.)
+   into the repository ROOT. Do not upload the ZIP itself. Do not drag an
+   enclosing folder called callawayoutdoorsnew-main.
+4. Review the file changes and click Commit changes.
+5. Netlify webdesigntwo should automatically deploy. Confirm successful build.
+6. DO NOT change GoDaddy DNS, Netlify environment variables, or GitHub repo.
+7. Test home page, /api/inventory, an individual /inventory/*.html listing,
+   /sitemap.xml and Google Reviews endpoint before requesting Google indexing.
 
-EXPECTED NETLIFY SETTINGS (netlify.toml controls these):
-  Base directory: blank (repository root)
-  Publish directory: .
-  Functions directory: netlify/functions
-  Build command: npm install --no-audit --no-fund
+CLEANUP: The uploaded old repository accidentally contained these nested files:
+ netlify/functions/js/unit.js
+ netlify/functions/netlify/functions/inventory.mjs
+The new ZIP deliberately excludes them. GitHub uploads do NOT delete old
+files, so remove those two nested paths separately from GitHub after the
+new deployment is confirmed. They are duplicates and not the live functions.
 
-If the site is already working on an older published deployment, keep that
-one live until you confirm the new deploy's homepage works.
-
-Google Places API (New) may return only a small subset of Google reviews.
-After debugging is complete, remove the temporary error diagnostics from
-the public endpoint.
+DETAILS: SEO-AND-INVENTORY-UPDATE.txt

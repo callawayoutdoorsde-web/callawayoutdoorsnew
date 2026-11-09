@@ -26,3 +26,17 @@ for = "/js/*"
 
 [functions]
   directory = "netlify/functions"
+
+# Live server-rendered camper pages: overrides old static HTML files.
+[[redirects]]
+  from = "/inventory/*"
+  to = "/.netlify/functions/rv-page?slug=:splat"
+  status = 200
+  force = true
+
+# Inventory sitemap reflects current DealerCenter stock, not the original 26-unit snapshot.
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/.netlify/functions/rv-sitemap"
+  status = 200
+  force = true

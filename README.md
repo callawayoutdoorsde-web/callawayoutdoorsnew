@@ -1,25 +1,24 @@
-# Callaway Outdoors site
+# Callaway Outdoors website
+
+Official website: https://callaway-outdoors.com  
+GitHub: `callawayoutdoorsde-web/callawayoutdoorsnew` (`main`)  
+Netlify site: `webdesigntwo`
+
+A static marketing website with Netlify Functions for DealerCenter inventory,
+server-rendered camper detail pages, a live XML sitemap and Google Reviews.
 
 ## Deploy
-Unzip and drag this entire folder into Netlify.
 
-## AppOne
-Open `js/config.js` and paste the dealer-specific AppOne application URL into `appOneUrl`. Do not embed or collect SSNs directly on this site.
+Upload all extracted ZIP contents to the GitHub repository **root**. Netlify
+uses `netlify.toml` (publish directory `.`; functions `netlify/functions`).
+Do not change GoDaddy DNS or Netlify API keys for a normal code update.
 
-## Business texting
-The current landline is not text-enabled. `textEnabled` is false in `js/config.js`. After porting 302-640-5353 to a texting-capable VoIP provider and completing business texting registration, set it to true and use that number for future text CTAs.
+## Inventory and SEO
 
-## DealerCenter feed
-`data/inventory.json` is the temporary inventory source. Once DealerCenter supplies a feed/API, replace the JSON sync while keeping the same fields. Each unit can include a `photos` array and `source_url`.
+- `/api/inventory`: cached DealerCenter inventory, refreshed on demand after 24h.
+- `/inventory/<id>.html`: server-rendered camper page with current price and photos.
+- `/sitemap.xml`: generated from current inventory via a forced Netlify rewrite.
+- `unit.html?id=...`: legacy noindex page, not linked by current inventory cards.
+- All canonical URLs use https://callaway-outdoors.com (without www).
 
-## SEO included
-- Unique page titles and meta descriptions
-- Canonical URLs
-- LocalBusiness structured data
-- Product/Offer structured data on each unit
-- Static descriptive unit URLs in `/inventory/`
-- sitemap.xml and robots.txt
-- Open Graph metadata
-- Mobile-first navigation
-
-After the custom domain is live, verify `https://www.callaway-outdoors.com/sitemap.xml` in Google Search Console and request indexing.
+See `SEO-AND-INVENTORY-UPDATE.txt` for deployment checks and caveats.
