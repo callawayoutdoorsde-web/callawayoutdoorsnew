@@ -1,0 +1,14 @@
+CALLAWAY OUTDOORS — REDESIGN WITH EXISTING INVENTORY PRESERVED
+
+This ZIP is based on the restored Netlify deploy and includes the Callaway Difference redesign.
+It DOES NOT contain the temporary inventory shutdown / redirects from the later temporary ZIP.
+
+Inventory functions, live API, JS app/unit scripts and Netlify redirects remain unchanged from the restored deploy.
+Do not upload the previous Final-Temporary-Website.zip if inventory is working.
+
+To deploy using GitHub: extract this ZIP, copy the CONTENTS (not the ZIP itself) into the repository root preserving directories, commit, and review Netlify deploy logs.
+The current GitHub branch may contain other files not in this archive; reconcile or remove obsolete files carefully, especially duplicate nested netlify/functions directories.
+
+Before deploying, keep the current Netlify published deploy available for rollback.
+After deploying, verify /inventory, /api/inventory, individual camper pages, Google Reviews, contact/trade and quote forms.
+No SFTP changes have been made.

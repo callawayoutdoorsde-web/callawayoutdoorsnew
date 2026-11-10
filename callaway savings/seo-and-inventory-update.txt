@@ -1,0 +1,42 @@
+CALLAWAY OUTDOORS — LIVE SEO & INVENTORY UPDATE (NOVEMBER 2026)
+
+THIS IS THE COMPLETE SITE, based on the uploaded current GitHub repository.
+Preserved: design, logos, Google Reviews, financing, photos, Netlify settings.
+
+FIXED:
+- Main active function netlify/functions/inventory.mjs now uses the working
+  28547101-1.websites.dealercenter.net feed (not the old www domain).
+- Removed accidental nested copies of js/unit.js and inventory.mjs that were
+  uploaded inside netlify/functions/. Only root files are active.
+- Homepage and inventory cards link to /inventory/<id>.html.
+- Netlify forced rewrites server-render those pages using current cached feed
+  data: current price, images, VIN, stock, title, meta description, canonical
+  and Product structured data. No redirect to noindex unit.html.
+- /sitemap.xml is generated from current cached inventory, so new campers are
+  included and sold campers removed after the next 24-hour feed refresh.
+- Main pages and robots.txt use the primary non-www domain.
+- Old static inventory pages no longer redirect; they are fallbacks only.
+- Google Reviews API key remains in Netlify environment variables; never
+  upload it to GitHub.
+
+DEPLOY: GitHub repo callawayoutdoorsde-web/callawayoutdoorsnew (main branch).
+Unzip and upload the CONTENTS (folders and files) to the REPOSITORY ROOT.
+Replace matching files; do not create another enclosing folder.
+IMPORTANT: Delete the old nested paths from GitHub if they are present:
+  netlify/functions/js/unit.js
+  netlify/functions/netlify/functions/inventory.mjs
+The new ZIP omits them, but GitHub uploads do not delete existing files.
+Check Netlify deploy is successful, then test in order:
+  https://callaway-outdoors.com/
+  https://callaway-outdoors.com/api/inventory
+  https://callaway-outdoors.com/inventory/2019-momentum-376th.html
+  https://callaway-outdoors.com/sitemap.xml
+  https://callaway-outdoors.com/.netlify/functions/google-reviews
+The camper page must show photos/current price and NOT redirect to unit.html.
+Google Search Console: Test Live URL, then Request Indexing once it reports
+'URL is available to Google'. Re-submit sitemap if necessary.
+
+NOTES: Inventory refreshes on demand after 24 hours, not instantly. The
+DealerCenter staging feed is still a dependency; confirm with DealerCenter
+that the staging hostname will remain accessible long term.
+Only campers with photos and a positive price appear in this feed.

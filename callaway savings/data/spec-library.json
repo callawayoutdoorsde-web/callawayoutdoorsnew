@@ -1,0 +1,481 @@
+{
+  "2012|keystone|outback 312bh": {
+    "length": "35' 5\"",
+    "dryWeight": 7579,
+    "gvwr": 9000,
+    "sleeps": 10,
+    "slides": 2,
+    "hitchWeight": 765,
+    "freshWater": 43,
+    "grayWater": 60,
+    "blackWater": 30,
+    "verified": true,
+    "source": "Keystone brochure / RVUSA",
+    "aliases": [
+      "Outback 312BH",
+      "312BH"
+    ]
+  },
+  "2020|forest river|salem hemisphere 314bud": {
+    "length": "39' 0\"",
+    "dryWeight": 8354,
+    "gvwr": 9920,
+    "sleeps": 10,
+    "slides": 2,
+    "hitchWeight": 960,
+    "freshWater": 48,
+    "grayWater": 77,
+    "blackWater": 64,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Salem Hemisphere 314BUD",
+      "Hemisphere 314BUD",
+      "314BUD"
+    ]
+  },
+  "2015|keystone|sprinter 295rks": {
+    "length": "35' 3\"",
+    "dryWeight": 7830,
+    "gvwr": 10300,
+    "sleeps": 6,
+    "slides": 2,
+    "hitchWeight": 1145,
+    "freshWater": 81,
+    "grayWater": 80,
+    "blackWater": 40,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Sprinter 295RKS",
+      "295RKS"
+    ]
+  },
+  "2020|forest river|cherokee 324ts": {
+    "length": "40' 3\"",
+    "dryWeight": 8603,
+    "gvwr": 11365,
+    "sleeps": 10,
+    "slides": 3,
+    "hitchWeight": 1165,
+    "freshWater": 46,
+    "grayWater": 38,
+    "blackWater": 38,
+    "verified": true,
+    "source": "Forest River / RVUSA",
+    "aliases": [
+      "Cherokee 324TS",
+      "324TS"
+    ]
+  },
+  "2018|forest river|heritage glen 272rl": {
+    "length": "34' 4\"",
+    "dryWeight": 7294,
+    "gvwr": 9645,
+    "sleeps": 6,
+    "slides": 2,
+    "hitchWeight": 845,
+    "freshWater": 48,
+    "grayWater": 66,
+    "blackWater": 30,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Heritage Glen 272RL",
+      "Wildwood Heritage Glen 272RL",
+      "272RL"
+    ]
+  },
+  "2017|keystone|premier 29rkpr": {
+    "length": "33' 10\"",
+    "dryWeight": 6073,
+    "gvwr": 7690,
+    "sleeps": 6,
+    "slides": 1,
+    "hitchWeight": 691,
+    "freshWater": 43,
+    "grayWater": 60,
+    "blackWater": 30,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Premier 29RKPR",
+      "Bullet Premier 29RKPR",
+      "29RKPR"
+    ]
+  },
+  "2018|keystone|premier 31bkpr": {
+    "length": "35' 11\"",
+    "dryWeight": 6635,
+    "gvwr": 8760,
+    "sleeps": 10,
+    "slides": 2,
+    "hitchWeight": 850,
+    "freshWater": 43,
+    "grayWater": 30,
+    "blackWater": 30,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Premier 31BKPR",
+      "Bullet Premier 31BKPR",
+      "31BKPR"
+    ]
+  },
+  "2016|forest river|cherokee 274dbh": {
+    "length": "31' 8\"",
+    "dryWeight": 6243,
+    "gvwr": 7732,
+    "sleeps": 9,
+    "slides": 1,
+    "hitchWeight": 732,
+    "freshWater": 46,
+    "grayWater": 38,
+    "blackWater": 28,
+    "verified": true,
+    "source": "Forest River / RVUSA",
+    "aliases": [
+      "Cherokee 274DBH",
+      "274DBH"
+    ]
+  },
+  "2017|keystone|outback 324cg": {
+    "length": "36' 10\"",
+    "dryWeight": 7720,
+    "gvwr": 10500,
+    "sleeps": 8,
+    "slides": 2,
+    "hitchWeight": 985,
+    "freshWater": 53,
+    "grayWater": 76,
+    "blackWater": 38,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Outback 324CG",
+      "Outback Super-Lite 324CG",
+      "324CG"
+    ]
+  },
+  "2024|forest river|campsite reserve 26cj": {
+    "length": "32' 9\"",
+    "dryWeight": 6421,
+    "gvwr": 7674,
+    "sleeps": 7,
+    "slides": 1,
+    "hitchWeight": 674,
+    "freshWater": 52,
+    "grayWater": 28,
+    "blackWater": 38,
+    "verified": true,
+    "source": "Forest River / RVUSA",
+    "aliases": [
+      "Campsite Reserve 26CJ",
+      "26CJ"
+    ]
+  },
+  "2024|cruiser rv|twilight tws31bh": {
+    "length": "36' 5\"",
+    "dryWeight": 7480,
+    "gvwr": 9722,
+    "sleeps": 9,
+    "slides": 3,
+    "hitchWeight": 922,
+    "verified": true,
+    "source": "Cruiser RV brochure / RVUSA",
+    "aliases": [
+      "Twilight TWS31BH",
+      "Twilight TWS-31BH",
+      "Twilight Signature TWS-31BH",
+      "TWS31BH",
+      "TWS-31BH"
+    ]
+  },
+  "2019|grand design|momentum 376th": {
+    "length": "41' 3\"",
+    "dryWeight": 15900,
+    "gvwr": 20000,
+    "sleeps": 6,
+    "slides": 5,
+    "hitchWeight": 3250,
+    "freshWater": 117,
+    "grayWater": 104,
+    "blackWater": 52,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Momentum 376TH",
+      "376TH"
+    ]
+  },
+  "2022|coachmen|catalina 303rkds": {
+    "length": "36' 11\"",
+    "dryWeight": 8042,
+    "gvwr": 10000,
+    "sleeps": 6,
+    "slides": 2,
+    "hitchWeight": 1086,
+    "freshWater": 44,
+    "grayWater": 70,
+    "blackWater": 30,
+    "verified": true,
+    "source": "JD Power / RVingPlanet",
+    "aliases": [
+      "Catalina 303RKDS",
+      "Catalina Legacy 303RKDS",
+      "Catalina Legacy Edition 303RKDS",
+      "303RKDS"
+    ]
+  },
+  "2020|forest river|sierra 372lok": {
+    "length": "41' 9\"",
+    "dryWeight": 12962,
+    "gvwr": 15500,
+    "sleeps": 8,
+    "slides": 4,
+    "hitchWeight": 2474,
+    "freshWater": 60,
+    "grayWater": 134,
+    "blackWater": 52,
+    "verified": true,
+    "source": "Forest River brochure / RVUSA",
+    "aliases": [
+      "Sierra 372LOK",
+      "372LOK"
+    ]
+  },
+  "2018|crossroads|sunset trail 331bh": {
+    "length": "37' 6\"",
+    "dryWeight": 7186,
+    "gvwr": 9735,
+    "sleeps": 10,
+    "slides": 3,
+    "hitchWeight": 936,
+    "freshWater": 45,
+    "grayWater": 60,
+    "blackWater": 60,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Sunset Trail 331BH",
+      "Sunset Trail Super Lite 331BH",
+      "331BH"
+    ]
+  },
+  "2021|forest river|salem fsx 260rt": {
+    "length": "28' 8\"",
+    "dryWeight": 4728,
+    "gvwr": 7610,
+    "sleeps": 4,
+    "slides": 0,
+    "hitchWeight": 610,
+    "freshWater": 43,
+    "grayWater": 30,
+    "blackWater": 30,
+    "verified": true,
+    "source": "Forest River / JD Power",
+    "aliases": [
+      "Salem FSX 260RT",
+      "FSX 260RT",
+      "260RT"
+    ]
+  },
+  "2020|venture rv|sporttrek 302vrb": {
+    "length": "33' 6\"",
+    "dryWeight": 7270,
+    "gvwr": 8300,
+    "sleeps": 4,
+    "slides": 2,
+    "hitchWeight": 960,
+    "freshWater": 40,
+    "grayWater": 64,
+    "blackWater": 32,
+    "verified": true,
+    "source": "RVUSA / Venture RV brochure",
+    "aliases": [
+      "SportTrek 302VRB",
+      "SportTrek Touring 302VRB",
+      "SportTrek Touring Edition 302VRB",
+      "STT302VRB",
+      "302VRB"
+    ]
+  },
+  "2018|heartland|cyclone 4005": {
+    "length": "44' 1\"",
+    "dryWeight": 16290,
+    "gvwr": 20000,
+    "sleeps": 11,
+    "slides": 3,
+    "hitchWeight": 3540,
+    "freshWater": 100,
+    "grayWater": 80,
+    "blackWater": 40,
+    "verified": true,
+    "source": "Heartland brochure / JD Power",
+    "aliases": [
+      "Cyclone 4005",
+      "4005"
+    ]
+  },
+  "2021|prime time|tracer 200bhsle": {
+    "length": "24' 11\"",
+    "dryWeight": 4128,
+    "gvwr": 7450,
+    "sleeps": 7,
+    "slides": 0,
+    "hitchWeight": 450,
+    "freshWater": 42,
+    "grayWater": 34,
+    "blackWater": 34,
+    "verified": true,
+    "source": "Prime Time brochure / Delmarva listing",
+    "aliases": [
+      "Tracer 200BHSLE",
+      "Tracer LE 200BHSLE",
+      "200BHSLE"
+    ]
+  },
+  "2020|kz|sportsmen 312bhse": {
+    "length": "36' 1\"",
+    "dryWeight": 7110,
+    "gvwr": 8800,
+    "sleeps": 10,
+    "slides": 2,
+    "hitchWeight": 910,
+    "freshWater": 40,
+    "grayWater": 32,
+    "blackWater": 32,
+    "verified": true,
+    "source": "KZ RV",
+    "aliases": [
+      "Sportsmen 312BHSE",
+      "Sportsmen SE 312BHSE",
+      "312BHSE"
+    ]
+  },
+  "2013|forest river|rockwood windjammer 3065": {
+    "length": "34' 5\"",
+    "dryWeight": 7132,
+    "gvwr": 8650,
+    "sleeps": 6,
+    "slides": 3,
+    "hitchWeight": 909,
+    "freshWater": 43,
+    "grayWater": 38,
+    "blackWater": 38,
+    "verified": true,
+    "source": "JD Power / Rockwood brochure",
+    "aliases": [
+      "Rockwood Windjammer 3065",
+      "Windjammer 3065",
+      "Windjammer 3065W",
+      "3065",
+      "3065W"
+    ]
+  },
+  "2019|coachmen|freedom express 320bdsle": {
+    "length": "36' 11\"",
+    "dryWeight": 7952,
+    "gvwr": 10500,
+    "sleeps": 10,
+    "slides": 3,
+    "hitchWeight": 879,
+    "freshWater": 49,
+    "grayWater": 66,
+    "blackWater": 33,
+    "verified": true,
+    "source": "Coachmen brochure / RVUSA",
+    "aliases": [
+      "Freedom Express 320BDSLE",
+      "Freedom Express Liberty 320BDSLE",
+      "Freedom Express Liberty Edition 320BDSLE",
+      "320BDSLE",
+      "320 BHDSLE"
+    ]
+  },
+  "2015|keystone|outback 301qb": {
+    "length": "33' 6\"",
+    "dryWeight": 7000,
+    "gvwr": 9000,
+    "sleeps": 10,
+    "slides": 2,
+    "hitchWeight": 790,
+    "freshWater": 53,
+    "grayWater": 68,
+    "blackWater": 34,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Outback 301QB",
+      "Outback Super-Lite 301BQ",
+      "Outback 301BQ",
+      "301QB",
+      "301BQ"
+    ]
+  },
+  "2025|keystone|coleman 17b": {
+    "length": "20' 5\"",
+    "dryWeight": 3088,
+    "gvwr": 3990,
+    "sleeps": 6,
+    "slides": 0,
+    "verified": true,
+    "source": "Keystone brochure / Camping World",
+    "aliases": [
+      "Coleman 17B",
+      "Coleman Lantern 17B",
+      "17B"
+    ]
+  },
+  "2016|forest river|sandpiper 371rebh": {
+    "length": "42' 11\"",
+    "dryWeight": 12624,
+    "gvwr": 15500,
+    "sleeps": 7,
+    "slides": 4,
+    "hitchWeight": 1996,
+    "freshWater": 60,
+    "grayWater": 100,
+    "blackWater": 50,
+    "verified": true,
+    "source": "Forest River brochure / JD Power",
+    "aliases": [
+      "Sandpiper 371REBH",
+      "371REBH"
+    ]
+  },
+  "2021|prime time|avenger 26bk": {
+    "length": "28' 11\"",
+    "dryWeight": 4776,
+    "gvwr": 7488,
+    "sleeps": 8,
+    "slides": 0,
+    "hitchWeight": 488,
+    "freshWater": 42,
+    "grayWater": 34,
+    "blackWater": 34,
+    "verified": true,
+    "source": "RVUSA",
+    "aliases": [
+      "Avenger 26BK",
+      "26BK"
+    ]
+  },
+  "2020|keystone|impact 359": {
+    "length": "39' 0\"",
+    "dryWeight": 12355,
+    "gvwr": 16880,
+    "sleeps": 6,
+    "slides": 2,
+    "hitchWeight": 2880,
+    "freshWater": 106,
+    "grayWater": 88,
+    "blackWater": 88,
+    "verified": true,
+    "source": "JD Power",
+    "aliases": [
+      "Impact 359",
+      "359"
+    ]
+  }
+}

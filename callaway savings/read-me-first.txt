@@ -1,0 +1,28 @@
+CALLAWAY OUTDOORS - CONTACT & TRADE FORM REPAIR
+
+Files in this ZIP:
+  trade.html      (updated form submission destination)
+  contact.html    (updated form submission destination)
+  thank-you.html  (new success/confirmation page)
+
+UPLOAD ALL THREE FILES TO THE ROOT OF YOUR GITHUB REPOSITORY
+  callawayoutdoorsde-web/callawayoutdoorsnew
+Do NOT place them in the inventory or netlify/functions folders.
+Do NOT replace netlify.toml, inventory.mjs, or any SEO files.
+
+1. Extract ZIP. Open GitHub repo main folder, choose Add file -> Upload files.
+2. Upload trade.html, contact.html, thank-you.html; commit changes.
+3. Wait for Netlify deployment to publish.
+4. Open Netlify -> Forms and check that 'trade-evaluation' and
+   'sales-contact' are now detected. Form detection must be enabled.
+5. Submit a test from BOTH website forms. Expected result: thank-you page.
+6. Confirm each submission appears under Netlify Forms and an email
+   notification arrives at callawayoutdoorsde@gmail.com.
+
+IMPORTANT: The success page alone does NOT prove an email was delivered.
+Check the Netlify Forms submissions list and your inbox/spam.
+If forms still do not appear in Netlify after deploy, the form-processing
+configuration needs investigation before accepting real customer leads.
+
+The existing form fields, photos upload, site design, DealerCenter inventory,
+Google Reviews, and SEO routes are unchanged.

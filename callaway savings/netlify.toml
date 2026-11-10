@@ -1,0 +1,56 @@
+[[headers]]
+for = "/*"
+  [headers.values]
+  X-Content-Type-Options = "nosniff"
+  Referrer-Policy = "strict-origin-when-cross-origin"
+  Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+for = "/assets/*"
+  [headers.values]
+  Cache-Control = "public, max-age=604800"
+
+[[headers]]
+for = "/css/*"
+  [headers.values]
+  Cache-Control = "public, max-age=604800"
+
+[[headers]]
+for = "/js/*"
+  [headers.values]
+  Cache-Control = "public, max-age=86400"
+
+[build]
+  publish = "."
+  command = "npm install --no-audit --no-fund"
+
+[functions]
+  directory = "netlify/functions"
+
+# Serve the inventory page at /inventory while keeping /inventory in the address bar.
+# Keep these BEFORE the /inventory/* camper-detail rewrite.
+[[redirects]]
+  from = "/inventory"
+  to = "/inventory.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/inventory/"
+  to = "/inventory.html"
+  status = 200
+  force = true
+
+# Live server-rendered camper pages: overrides old static HTML files.
+[[redirects]]
+  from = "/inventory/*"
+  to = "/.netlify/functions/rv-page?slug=:splat"
+  status = 200
+  force = true
+
+# Inventory sitemap reflects current DealerCenter stock, not the original 26-unit snapshot.
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/.netlify/functions/rv-sitemap"
+  status = 200
+  force = true
