@@ -137,3 +137,27 @@
 .differenceTextLink{font-weight:750;color:#b8192f;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:950px){.differenceCards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.differenceShowcase{padding:54px 0}.differenceCards{grid-template-columns:1fr}.differenceCards article{padding:22px}.heroCopy h1{font-size:clamp(2.45rem,10vw,3.4rem)}}
+
+/* Callaway photo gallery and difference cards — presentation only */
+.differenceShowcase{background:linear-gradient(150deg,#f0f2f5 0%,#fff 58%,#f7f0f1 100%)}
+.differenceCards{gap:18px}
+.differenceCards article{position:relative;overflow:hidden;background:#171b23;color:#fff;border:1px solid #2c3340;border-radius:18px;padding:30px 25px;box-shadow:0 14px 30px rgba(13,18,28,.14);transition:transform .2s ease,box-shadow .2s ease}
+.differenceCards article:hover{transform:translateY(-4px);box-shadow:0 20px 38px rgba(13,18,28,.21)}
+.differenceCards article:before{content:'';display:block;width:45px;height:5px;background:#f04455;border-radius:8px;margin-bottom:22px}
+.differenceCards h3{color:#fff;font-size:1.2rem;font-weight:850;margin-bottom:14px}
+.differenceCards p{color:#d4d8e0;line-height:1.7}
+.differenceNumber{display:none!important}
+.callawayPhotoStory,.callawayServicePhotos{padding:72px 0 84px;background:#fff;color:#17191e}
+.callawayServicePhotos{background:#f3f5f7}
+.callawayStoryIntro{max-width:800px;margin-bottom:28px}
+.callawayStoryIntro .eyebrow{font-size:.8rem;color:#c21d31;font-weight:850;letter-spacing:.15em}
+.callawayStoryIntro h2{font-size:clamp(2rem,3.5vw,3.25rem);line-height:1.15;letter-spacing:-.035em;margin:12px 0 16px}
+.callawayStoryIntro h2 em{color:#d71935;font-style:normal}
+.callawayStoryIntro p{font-size:1.08rem;line-height:1.75;color:#525b69}
+.callawayPhotoGrid,.callawayServiceGrid{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:repeat(2,210px);gap:15px}
+.callawayPhotoGrid figure,.callawayServiceGrid figure{position:relative;overflow:hidden;margin:0;border-radius:18px;background:#14171d}
+.callawayPhotoGrid figure:first-child,.callawayServiceGrid figure:first-child{grid-row:span 2}
+.callawayPhotoGrid img,.callawayServiceGrid img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.callawayPhotoGrid figure:hover img,.callawayServiceGrid figure:hover img{transform:scale(1.025)}
+.callawayPhotoGrid figcaption,.callawayServiceGrid figcaption{position:absolute;bottom:0;left:0;right:0;padding:24px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.76));color:#fff;font-size:.9rem;font-weight:750}
+@media(max-width:700px){.callawayPhotoStory,.callawayServicePhotos{padding:48px 0 56px}.callawayPhotoGrid,.callawayServiceGrid{grid-template-columns:1fr;grid-template-rows:auto}.callawayPhotoGrid figure,.callawayServiceGrid figure,.callawayPhotoGrid figure:first-child,.callawayServiceGrid figure:first-child{grid-row:auto;height:210px}.callawayPhotoGrid figure:first-child,.callawayServiceGrid figure:first-child{height:260px}.differenceCards article{padding:24px}}
