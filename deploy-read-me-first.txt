@@ -1,0 +1,30 @@
+CALLAWAY OUTDOORS — COMPLETE WEBSITE (LIVE CAMPER SEO FIX)
+
+This ZIP contains the ENTIRE current website with the latest Google indexing
+and DealerCenter feed corrections. It is NOT just a patch.
+
+GITHUB REPOSITORY: callawayoutdoorsde-web/callawayoutdoorsnew
+NETLIFY SITE: webdesigntwo
+PUBLIC DOMAIN: https://callaway-outdoors.com
+
+SAFE DEPLOYMENT:
+1. Download this ZIP and extract it on your Windows computer.
+2. Open GitHub repo callawayoutdoorsde-web/callawayoutdoorsnew, main branch.
+3. Use Add file > Upload files. Drag ALL CONTENTS of the extracted folder
+   (index.html, netlify.toml, assets/, css/, js/, data/, inventory/, netlify/, etc.)
+   into the repository ROOT. Do not upload the ZIP itself. Do not drag an
+   enclosing folder called callawayoutdoorsnew-main.
+4. Review the file changes and click Commit changes.
+5. Netlify webdesigntwo should automatically deploy. Confirm successful build.
+6. DO NOT change GoDaddy DNS, Netlify environment variables, or GitHub repo.
+7. Test home page, /api/inventory, an individual /inventory/*.html listing,
+   /sitemap.xml and Google Reviews endpoint before requesting Google indexing.
+
+CLEANUP: The uploaded old repository accidentally contained these nested files:
+ netlify/functions/js/unit.js
+ netlify/functions/netlify/functions/inventory.mjs
+The new ZIP deliberately excludes them. GitHub uploads do NOT delete old
+files, so remove those two nested paths separately from GitHub after the
+new deployment is confirmed. They are duplicates and not the live functions.
+
+DETAILS: SEO-AND-INVENTORY-UPDATE.txt

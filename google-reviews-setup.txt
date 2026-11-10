@@ -1,0 +1,11 @@
+GOOGLE REVIEWS LIVE CAROUSEL SETUP
+
+1. In Google Cloud Console, create/select a project and enable Places API (New). Billing may be required.
+2. Create a restricted API key allowing Places API (New). Restrict by API, and keep the key server-side (not in JS).
+3. In Netlify > Site configuration > Environment variables, set GOOGLE_PLACES_API_KEY to your key.
+4. Deploy this website through Netlify with Functions enabled (Git-linked deployment recommended).
+5. Visit /.netlify/functions/google-reviews on your deployed domain to verify it returns JSON with rating and reviews.
+6. Check that the result is Callaway Outdoors LLC, Felton DE.
+
+Until configured, the homepage shows an attractive Google review panel linking to your public Google reviews. It DOES NOT invent or display fake customer quotations.
+Google Places API only returns a limited sample of reviews. Reviews rotate every 6.5 seconds. The Google review count/rating update from API when available.

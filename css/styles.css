@@ -116,3 +116,24 @@
 .liveReviews .reviewsNote{color:#aeb4bd;font-size:12px;margin:22px 0 0}
 @media(max-width:850px){.reviewSpotlight{grid-template-columns:1fr;gap:26px}.liveReviews{padding:52px 0}.reviewSpotlightPanel{padding:22px}.reviewRotator{min-height:210px}}
 @media(prefers-reduced-motion:reduce){.reviewRotator{transition:none}}
+
+/* Callaway Difference redesign — isolated homepage additions */
+.heroCopy h1{font-size:clamp(2.55rem,4.25vw,4.75rem);line-height:1.04;letter-spacing:-.055em;max-width:760px}
+.heroCopy h1 span{color:#ff4b5c}
+.heroCopy p{max-width:660px}
+.heroCopy .actions{display:flex;flex-wrap:wrap;gap:10px}
+.differenceShowcase{padding:82px 0;background:#f4f5f7;color:#16181e}
+.differenceIntro{max-width:800px;margin-bottom:30px}
+.differenceIntro .eyebrow{color:#c21d31;font-weight:800;letter-spacing:.14em}
+.differenceIntro h2{font-size:clamp(2.1rem,4vw,3.7rem);letter-spacing:-.045em;line-height:1.12;margin:14px 0}
+.differenceIntro h2 em{font-style:normal;color:#d71935}
+.differenceIntro p{font-size:1.1rem;line-height:1.7;color:#555b67}
+.differenceCards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.differenceCards article{background:white;border:1px solid #e2e4e8;border-radius:16px;padding:27px 23px;box-shadow:0 10px 35px rgba(17,24,39,.035)}
+.differenceNumber{font-weight:900;font-size:.9rem;color:#d71935;letter-spacing:.12em;margin-bottom:25px}
+.differenceCards h3{font-size:1.2rem;line-height:1.25;margin:0 0 12px;color:#17191d}
+.differenceCards p{color:#59606c;line-height:1.6;margin:0;font-size:.95rem}
+.differenceFooter{display:flex;align-items:center;flex-wrap:wrap;gap:24px;margin-top:28px}
+.differenceTextLink{font-weight:750;color:#b8192f;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:950px){.differenceCards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.differenceShowcase{padding:54px 0}.differenceCards{grid-template-columns:1fr}.differenceCards article{padding:22px}.heroCopy h1{font-size:clamp(2.45rem,10vw,3.4rem)}}

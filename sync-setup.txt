@@ -1,0 +1,24 @@
+DEALERCENTER AUTO SYNC (NETLIFY)
+
+Source: https://28547101-1.websites.dealercenter.net/dealercenter/facebook/feed.php?dcid=28547101
+
+The active inventory function is netlify/functions/inventory.mjs and its
+shared implementation is netlify/functions/lib/_inventory-data.mjs.
+The DealerCenter feed is cached for 24 hours in Netlify Blobs. A refresh
+happens on the first website request after that period, not at a fixed time.
+If the feed fails, the last good cached inventory is returned.
+
+Camper pages and the XML sitemap use the same inventory cache, keeping
+prices, photos and availability consistent.
+
+The feed currently omits units without photos or a positive price. The
+original data/inventory.json is fallback seed data for the website and
+merchandising matches, not the live inventory source.
+
+Check these routes after GitHub deploy:
+ /api/inventory
+ /inventory/2019-momentum-376th.html
+ /sitemap.xml
+
+Because this feed uses a DealerCenter staging hostname, verify with
+DealerCenter that the hostname will stay available long-term.
