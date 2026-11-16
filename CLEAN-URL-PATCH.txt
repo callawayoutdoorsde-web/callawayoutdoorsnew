@@ -1,0 +1,1 @@
+Camper link guard is embedded directly in index.html and inventory.html. It rewrites any legacy /unit.html?id=<id> link, including dynamically inserted inventory cards, to /inventory/<id>.html before navigation. This avoids dependency on cached or stale app.js link-generation code.

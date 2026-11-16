@@ -17,4 +17,30 @@
 <section class="section inventorySection"><div class="wrap"><div class="inventoryToolbar"><div><strong id="count">Loading inventory…</strong><span>Pre-owned campers currently available</span></div><a class="textLink" href="tel:+13026405353">Need help choosing? Call us →</a></div><div class="filters"><input class="field search" id="search" placeholder="Search year, make, model or feature"/><select class="field" id="type"><option>All</option><option>Travel Trailer</option><option>Fifth Wheel</option><option>Toy Hauler</option><option>Toy Hauler Fifth Wheel</option></select><select class="field" id="maxPrice"><option value="">Any price</option><option value="10000">Under $10,000</option><option value="15000">Under $15,000</option><option value="20000">Under $20,000</option><option value="30000">Under $30,000</option><option value="40000">Under $40,000</option></select><select class="field" id="sort"><option value="year-desc">Newest first</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select></div><div class="chips"><button class="chip active" data-filter="All">All</button><button class="chip" data-filter="Bunkhouse">Bunkhouses</button><button class="chip" data-filter="Toy Hauler">Toy haulers</button><button class="chip" data-filter="Outdoor Kitchen">Outdoor kitchens</button><button class="chip" data-filter="Under $10K">Under $10K</button></div><div class="grid" id="inventoryGrid"></div><p class="inventoryDisclaimer">Inventory changes frequently. Pricing excludes taxes, title and registration. Financing examples are estimates only and do not represent a credit offer.</p></div></section>
 <footer class="footer"><div class="wrap footerGrid"><div><a class="logoBrand footerLogo" href="index.html"><img alt="Callaway Outdoors" src="assets/callaway_outdoors_site_logo.png"/></a><p>Quality used campers at straightforward prices in Felton, Delaware.</p><div class="footerBadges"><span>No hidden dealer fees</span><span>Trades accepted</span><span>Delivery available</span></div></div><div><strong>Shop</strong><ul><li><a href="inventory.html">All inventory</a></li><li><a href="inventory.html?max=15000">Under $15K</a></li><li><a href="inventory.html?tag=Bunkhouse">Bunkhouses</a></li><li><a href="inventory.html?tag=Toy%20Hauler">Toy haulers</a></li></ul></div><div><strong>Customer tools</strong><ul><li><a href="financing.html">Financing / Apply</a></li><li><a href="trade.html">Value my trade</a></li><li><a href="service.html">Service &amp; warranty</a></li><li><a href="contact.html">Contact &amp; hours</a></li></ul></div><div><strong>Callaway Outdoors</strong><ul><li>8864 S Dupont Hwy, Felton, DE 19943</li><li><a href="tel:+13026405353">302-640-5353</a></li><li><a href="mailto:callawayoutdoorsde@gmail.com">callawayoutdoorsde@gmail.com</a></li></ul></div></div><div class="wrap footerBottom">© 2026 Callaway Outdoors. *$0 down subject to lender approval and qualification. Taxes, title and registration may apply. Inventory and pricing subject to prior sale.</div></footer>
 <div class="mobileBar"><a href="inventory.html">Inventory</a><a class="call" href="tel:+13026405353">Call sales</a><a href="financing.html">Finance</a></div>
-<script src="js/config.js"></script><script src="js/specs.js"></script><script src="js/payment.js?v=20261116"></script><script src="js/app-links-v2.js?v=20261116b"></script></body></html>
+<script src="js/config.js"></script><script src="js/specs.js"></script><script src="js/payment.js?v=20261116"></script><script src="js/app-links-v2.js?v=20261116b"></script><script id="clean-camper-url-guard">
+(function(){
+  function cleanLink(href){
+    try {
+      var u=new URL(href, location.origin);
+      if(u.pathname.endsWith('/unit.html') || u.pathname==='/unit.html'){
+        var id=u.searchParams.get('id');
+        if(id) return '/inventory/'+encodeURIComponent(id)+'.html';
+      }
+    } catch(e) {}
+    return null;
+  }
+  document.addEventListener('click', function(e){
+    var a=e.target.closest && e.target.closest('a[href]');
+    if(!a) return;
+    var dest=cleanLink(a.getAttribute('href'));
+    if(dest){ e.preventDefault(); e.stopPropagation(); location.href=dest; }
+  }, true);
+  function rewrite(){
+    document.querySelectorAll('a[href*="unit.html?id="]').forEach(function(a){
+      var dest=cleanLink(a.getAttribute('href')); if(dest) a.setAttribute('href',dest);
+    });
+  }
+  rewrite();
+  new MutationObserver(rewrite).observe(document.documentElement,{subtree:true,childList:true});
+})();
+</script></body></html>
