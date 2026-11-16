@@ -32,8 +32,11 @@ function legacyMatch(items, slug) {
 
 const unavailablePage = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Camper not available | Callaway Outdoors</title><style>body{font-family:Arial,sans-serif;margin:0;background:#f5f5f5;color:#111}.box{max-width:720px;margin:10vh auto;background:#fff;padding:42px;border-radius:18px;box-shadow:0 8px 30px #0001}h1{margin-top:0}.btn{display:inline-block;background:#e81f2f;color:#fff;text-decoration:none;padding:14px 20px;border-radius:9px;font-weight:700}</style></head><body><main class="box"><h1>This camper is no longer available.</h1><p>That listing may have sold or the inventory link may have changed. Browse our current campers to see what is available now.</p><a class="btn" href="/inventory.html">Browse current inventory</a></main></body></html>`;
 
-export default async request => {
-  const raw = new URL(request.url).searchParams.get('slug') || '';
+export default async (request, context) => {
+  const url = new URL(request.url);
+  // Prefer Netlify's named route parameter. Fall back to the pathname so the
+  // page still works if the routing context changes.
+  const raw = context?.params?.slug || url.pathname.split('/').pop() || url.searchParams.get('slug') || '';
   const slug = normalizeSlug(raw);
 
   // Never expose a raw "Invalid listing" error to customers.
@@ -60,4 +63,12 @@ export default async request => {
   } catch (_) {
     return new Response(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Inventory temporarily unavailable</title></head><body><h1>Inventory is temporarily unavailable.</h1><p>Please refresh shortly or <a href="/inventory.html">return to inventory</a>.</p></body></html>`, {status:503, headers:{...html,'cache-control':'no-store','x-robots-tag':'noindex'}});
   }
+};
+
+
+// Route clean camper URLs directly to this function. This avoids relying on a
+// netlify.toml rewrite to copy :slug into a query string.
+export const config = {
+  path: "/inventory/:slug.html",
+  method: "GET"
 };
