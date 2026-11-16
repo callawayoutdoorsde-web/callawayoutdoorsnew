@@ -13,7 +13,7 @@ const fmt = n => `${Number(n).toLocaleString('en-US')} lbs`;
 export function renderPage(u, library = {}) {
   const title = `${u.year} ${u.make} ${u.model}`.trim();
   const canonical = urlFor(u);
-  const desc = `Used ${title} camper for sale at Callaway Outdoors in Felton, Delaware. Priced at ${money(u.price)}. View RV photos and specs. $0 down financing options for qualified buyers.`;
+  const desc = `Used ${title} for sale at Callaway Outdoors in Felton, Delaware. Current price ${money(u.price)}. View photos, camper details, financing and trade-in options.`;
   const photo = (u.photos || []).filter(Boolean);
   const tags = Array.isArray(u.tags) ? u.tags : [];
   const spec = getSpecs(u, library);
@@ -46,11 +46,11 @@ export function renderPage(u, library = {}) {
     </aside></div></section>
     <section class="section"><div class="wrap"><div class="eyebrow darkEyebrow">USED RV FOR SALE IN DELAWARE</div><h2>${esc(title)} at Callaway Outdoors</h2><p>This pre-owned ${esc(u.type || 'camper')} is listed for ${money(u.price)} at Callaway Outdoors in Felton, Delaware. Contact us to confirm current availability, exact specifications, condition and included equipment before traveling.</p><div class="relatedLinks"><a href="/inventory.html">All used RVs</a><a href="/financing.html?price=${encodeURIComponent(u.price)}">RV financing</a><a href="/trade.html">Trade your camper</a><a href="/contact.html">Directions &amp; hours</a></div></div></section>`;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/">
-  <title>${esc(title)} | Used Campers For Sale | Callaway Outdoors Felton Delaware</title>
+  <title>${esc(title)} for Sale in Delaware | Callaway Outdoors</title>
   <meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="${esc(canonical)}"><meta name="theme-color" content="#101114">
   <meta property="og:type" content="product"><meta property="og:site_name" content="Callaway Outdoors">
-  <meta property="og:title" content="${esc(title)} | Used Campers For Sale | Callaway Outdoors Felton Delaware"><meta property="og:description" content="${esc(desc)}">
+  <meta property="og:title" content="${esc(title)} for Sale"><meta property="og:description" content="${esc(desc)}">
   <meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(photo[0] || DOMAIN+'/assets/callaway_outdoors_site_logo.png')}">
   <link rel="stylesheet" href="/css/styles.css"><script type="application/ld+json">${schema(product)}</script></head>
   <body>${SITE_HEADER}<main>${body}</main>${SITE_FOOTER}<script src="/js/gallery.js" defer></script></body></html>`;

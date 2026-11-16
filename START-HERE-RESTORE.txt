@@ -1,0 +1,26 @@
+CALLAWAY OUTDOORS — RESTORE WORKING CAMPER DETAIL LINKS
+
+This package is based on Callaway-Outdoors-Auto-Payments-Calculator.zip.
+Only netlify.toml routing was changed. Inventory source, SFTP, price logic,
+photos, unit.js, payment calculator, forms, reviews and specs are untouched.
+
+WHY: The forced /inventory/* rewrite to rv-page was sending detail-page
+requests to a function that could not consistently resolve the listing.
+
+WHAT TO EXPECT:
+- Clicking a camper should open /unit.html?id=<listing-id>.
+- This restores FUNCTIONAL detail pages, not yet SEO-friendly clean URLs.
+- Existing /inventory/<slug>.html static pages may still exist, but are NOT
+  the intended destination for live DealerCenter inventory cards.
+
+DEPLOY SAFELY:
+1. Back up the current working Netlify deployment.
+2. Upload this full ZIP's extracted contents to the CORRECT GitHub repository
+   (not just the ZIP file), keeping folder structure intact.
+3. Wait for the Netlify production deploy to finish.
+4. Check /inventory and click two units, verify photos, price and payment.
+5. If any listing fails, restore the previously working Netlify deploy.
+
+SEO NOTE: Dynamic unit.html?id= URLs are a temporary working fallback.
+Clean, Google-indexable URLs require a separate verified implementation,
+including server-rendered page content and correct canonical/noindex tags.

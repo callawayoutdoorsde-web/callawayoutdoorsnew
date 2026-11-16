@@ -36,10 +36,14 @@ for = "/js/*"
   force = true
 
 [[redirects]]
-  from = "/inventory/*"
-  to = "/.netlify/functions/rv-page?slug=:splat"
+  from = "/inventory/"
+  to = "/inventory.html"
   status = 200
   force = true
+
+# Keep individual camper links on the proven working /unit.html?id=... page.
+# Do not force /inventory/* to the rv-page function: it was causing
+# camper detail links to fail and can also override existing static pages.
 
 # Inventory sitemap reflects current DealerCenter stock, not the original 26-unit snapshot.
 [[redirects]]
