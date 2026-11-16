@@ -36,8 +36,8 @@ for = "/js/*"
   force = true
 
 [[redirects]]
-  from = "/inventory/"
-  to = "/inventory.html"
+  from = "/inventory/*"
+  to = "/.netlify/functions/rv-page?slug=:splat"
   status = 200
   force = true
 
