@@ -47,7 +47,7 @@ export function parseDealerCenterCsv(text) {
       vehicle_id: get(obj,'VIN') || get(obj,'StockNumber'),
       stock_number: get(obj,'StockNumber'), vin: get(obj,'VIN'),
       year: Number(get(obj,'Year')), make: get(obj,'Make'), model: get(obj,'Model'), trim: get(obj,'Trim'),
-      price: Number(get(obj,'Price').replace(/[^0-9.]/g,'')),
+      price: Number(get(obj,'Price').replace(/[^0-9.]/g,'')) + 599,
       photos: photoText.split(/\s*,\s*/).filter(x=>/^https?:\/\//i.test(x)),
       description: get(obj,'WebAdDescription'),
       equipment_code: get(obj,'EquipmentCode'),

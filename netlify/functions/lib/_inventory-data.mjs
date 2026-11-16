@@ -26,7 +26,7 @@ async function loadSource() {
 }
 export async function loadInventory(request) {
   const store = getStore('callaway-inventory');
-  let cache; try { cache = await store.get('snapshot-v2', {type:'json'}); } catch (_) {}
+  let cache; try { cache = await store.get('snapshot-v3', {type:'json'}); } catch (_) {}
   if (Array.isArray(cache?.items) && Date.now()-cache.checkedAt<TTL) return {items:cache.items, stale:false, source:cache.source};
   try {
     const [source, baseResp, specResp] = await Promise.all([
@@ -39,7 +39,7 @@ export async function loadInventory(request) {
     const base = await baseResp.json(); const specs = await specResp.json();
     if (parsed.length < 3) throw Error('Unexpectedly small inventory feed');
     const items = mergeInventory(parsed, base).map(u=>enrichWithSpecs(u,specs));
-    await store.setJSON('snapshot-v2', {checkedAt:Date.now(), source:source.kind, items});
+    await store.setJSON('snapshot-v3', {checkedAt:Date.now(), source:source.kind, items});
     return {items, stale:false, source:source.kind};
   } catch (e) {
     if (Array.isArray(cache?.items) && cache.items.length) return {items:cache.items, stale:true, source:cache.source || 'cache'};

@@ -1,0 +1,6 @@
+DealerCenter SFTP price handling
+================================
+The DealerCenter CSV Price field is $599 below Callaway Outdoors' intended advertised website price.
+The SFTP CSV importer therefore adds $599 to the incoming Price value before displaying it publicly.
+The legacy HTTP-feed fallback is left unchanged.
+The Netlify inventory cache key was bumped so corrected prices refresh immediately after deployment.
