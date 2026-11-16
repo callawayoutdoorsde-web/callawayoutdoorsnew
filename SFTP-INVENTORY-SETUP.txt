@@ -1,0 +1,22 @@
+CALLAWAY OUTDOORS — DEALERCENTER SFTP INVENTORY SETUP
+
+This website version reads DealerCenter's CSV directly from the existing Lightsail SFTP account through a Netlify server-side function. The SFTP password is NEVER placed in browser JavaScript.
+
+In Netlify -> webdesigntwo -> Site configuration -> Environment variables, add:
+
+DEALERCENTER_SFTP_HOST = 98.95.235.184
+DEALERCENTER_SFTP_PORT = 22
+DEALERCENTER_SFTP_USER = dealercenter
+DEALERCENTER_SFTP_PASSWORD = [use the password already created for DealerCenter]
+DEALERCENTER_SFTP_PATH = /inventory/inventory/DealerCenter_28547101.csv
+
+Then redeploy once so the new environment variables are available to the Netlify Functions.
+
+Behavior:
+- Netlify checks the SFTP CSV at most once per hour.
+- If SFTP is temporarily unavailable, it tries the previous DealerCenter HTTP/XML feed.
+- If both are unavailable, the last successful Netlify cache is served.
+- DealerCenter PhotoURLs are imported as a full gallery.
+- Odometer, ExteriorColor, InteriorColor, and Transmission are ignored and never displayed.
+- Verified RV specs are automatically matched from data/spec-library.json by year, make, model/trim.
+- Current verified spec library contains 27 floorplans. Unmatched floorplans simply omit the verified-spec panel until a record is added; the listing still works normally.
