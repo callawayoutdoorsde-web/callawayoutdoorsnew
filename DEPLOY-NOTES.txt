@@ -1,0 +1,8 @@
+Callaway Outdoors — clean camper link rollout
+
+Changes: js/app.js now links inventory cards, featured cards, and homepage carousel to /inventory/<id>.html.
+No changes to inventory feed, payments, photos, mobile CSS, or rv-page function.
+Legacy unit.html?id=... is retained as a noindex fallback. It is NOT a server-side 301 redirect.
+
+After deployment test: inventory card; homepage featured carousel; clean URL; legacy URL; /sitemap.xml.
+Do not remove legacy page until the new links are confirmed on production.

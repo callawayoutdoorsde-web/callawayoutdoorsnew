@@ -41,11 +41,9 @@ for = "/js/*"
   status = 200
   force = true
 
-# Keep individual camper links on the proven working /unit.html?id=... page.
-# Do not force /inventory/* to the rv-page function: it was causing
-# camper detail links to fail and can also override existing static pages.
-
-# Clean camper URLs are routed directly by netlify/functions/rv-page.mjs.
+# Individual camper links use /inventory/<slug>.html, handled by
+# netlify/functions/rv-page.mjs via its function config path.
+# Legacy /unit.html?id=... remains available as a noindex fallback.
 
 # Inventory sitemap reflects current DealerCenter stock, not the original 26-unit snapshot.
 [[redirects]]
