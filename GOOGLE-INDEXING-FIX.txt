@@ -1,0 +1,8 @@
+Google indexing fix - Nov 16, 2026
+
+- Inventory cards and featured campers now link directly to /inventory/<id>.html.
+- unit.html no longer contains a blocking noindex directive.
+- Legacy /unit.html?id=<id> URLs immediately redirect in-browser to the clean inventory URL.
+- Server-rendered inventory pages already use index,follow, unique titles/descriptions, canonical URLs and structured data.
+
+After deploying, test a clean /inventory/<id>.html URL in Google Search Console using Test Live URL.
