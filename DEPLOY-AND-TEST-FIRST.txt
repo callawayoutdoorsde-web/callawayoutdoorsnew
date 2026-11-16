@@ -1,0 +1,20 @@
+CALLAWAY OUTDOORS - SAFE SEO / PAYMENTS / MOBILE UPDATE
+
+IMPORTANT: This version intentionally preserves the known-working /unit.html?id= camper links.
+It ADDS clean /inventory/<id>.html SEO pages as a separate route, rather than switching all
+customer clicks before confirming the server-side page works.
+
+1. Deploy to a Netlify preview or keep a rollback deploy.
+2. Verify inventory cards and legacy unit detail pages still work.
+3. Verify estimated payments on cards and unit details.
+4. Verify mobile featured carousel appears before headline.
+5. Directly test /inventory/<known-id>.html. It must show a real camper with index,follow
+   and a self-referencing canonical. If it fails, do not submit sitemap or request indexing.
+6. After clean pages are verified, a second small update can change all inventory links
+   from legacy unit.html?id= to /inventory/<id>.html.
+
+The legacy unit.html template remains noindex deliberately: it is a duplicate and must not
+compete with the canonical clean URLs.
+
+Payment estimates use 8.9% APR / 180 months / $0 down, subject to lender approval,
+unit eligibility, taxes, title and other costs.

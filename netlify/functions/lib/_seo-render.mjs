@@ -13,7 +13,7 @@ const fmt = n => `${Number(n).toLocaleString('en-US')} lbs`;
 export function renderPage(u, library = {}) {
   const title = `${u.year} ${u.make} ${u.model}`.trim();
   const canonical = urlFor(u);
-  const desc = `Used ${title} for sale at Callaway Outdoors in Felton, Delaware. Current price ${money(u.price)}. View photos, camper details, financing and trade-in options.`;
+  const desc = `Used ${title} camper for sale at Callaway Outdoors in Felton, Delaware. Price ${money(u.price)}. View photos, specs and estimated payments. $0 down financing options for qualified buyers.`;
   const photo = (u.photos || []).filter(Boolean);
   const tags = Array.isArray(u.tags) ? u.tags : [];
   const spec = getSpecs(u, library);
@@ -37,23 +37,24 @@ export function renderPage(u, library = {}) {
     <div class="kicker">PRE-OWNED • ${esc(u.type || 'CAMPER')}</div>
     <h1>${esc(u.year)} ${esc(u.make)}<br>${esc(u.model)}</h1>
     <div class="price">${money(u.price)}</div>
+    <div id="seoEstimatedPayment"></div>
     <p style="font-weight:850;line-height:1.45">Straightforward pricing with $0 down options for well-qualified buyers, trades and delivery available.</p>
     <div class="tags">${tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
     ${specs.length ? `<div class="verifiedSpecs"><div class="verifiedSpecsHead"><strong>Verified model specifications</strong><span>Matched by year / make / model</span></div><div class="specDataGrid">${specs.map(([k,v])=>`<div class="specDataItem"><small>${esc(k)}</small><strong>${esc(v)}</strong></div>`).join('')}</div><p class="specDisclaimer">Manufacturer/base-model specifications. Options and production changes may affect actual figures. Verify the unit data plate before towing.</p></div>` : ''}
     <div class="specs"><div class="spec"><strong>Condition</strong><br><span class="meta">Pre-owned</span></div><div class="spec"><strong>Location</strong><br><span class="meta">Felton, Delaware</span></div>${u.stock_number ? `<div class="spec"><strong>Stock #</strong><br><span class="meta">${esc(u.stock_number)}</span></div>` : ''}${u.vin ? `<div class="spec"><strong>VIN</strong><br><span class="meta">${esc(u.vin)}</span></div>` : ''}<div class="spec"><strong>Financing</strong><br><span class="meta">$0 down options*</span></div><div class="spec"><strong>Trades</strong><br><span class="meta">Welcome</span></div></div>
-    ${u.description ? `<div class="unitDescription">${esc(u.description)}</div>` : ''}<div class="actions"><a class="btn red" href="tel:+13026405353">Call (302) 640-5353</a><a class="btn light" href="/financing.html?price=${encodeURIComponent(u.price)}">Financing options</a></div>
+    ${u.description ? `<div class="unitDescription">${esc(u.description)}</div>` : ''}<div id="seoPaymentCalculator"></div><div class="actions"><a class="btn red" href="tel:+13026405353">Call (302) 640-5353</a><a class="btn light" href="/financing.html?price=${encodeURIComponent(u.price)}">Financing options</a></div>
     <p class="notice">*$0 down subject to lender approval and qualification. Taxes, title and registration may apply. Inventory and pricing subject to prior sale.</p>
     </aside></div></section>
     <section class="section"><div class="wrap"><div class="eyebrow darkEyebrow">USED RV FOR SALE IN DELAWARE</div><h2>${esc(title)} at Callaway Outdoors</h2><p>This pre-owned ${esc(u.type || 'camper')} is listed for ${money(u.price)} at Callaway Outdoors in Felton, Delaware. Contact us to confirm current availability, exact specifications, condition and included equipment before traveling.</p><div class="relatedLinks"><a href="/inventory.html">All used RVs</a><a href="/financing.html?price=${encodeURIComponent(u.price)}">RV financing</a><a href="/trade.html">Trade your camper</a><a href="/contact.html">Directions &amp; hours</a></div></div></section>`;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/">
-  <title>${esc(title)} for Sale in Delaware | Callaway Outdoors</title>
+  <title>${esc(title)} | Used Campers For Sale | Callaway Outdoors Felton Delaware</title>
   <meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="${esc(canonical)}"><meta name="theme-color" content="#101114">
   <meta property="og:type" content="product"><meta property="og:site_name" content="Callaway Outdoors">
-  <meta property="og:title" content="${esc(title)} for Sale"><meta property="og:description" content="${esc(desc)}">
+  <meta property="og:title" content="${esc(title)} | Used Campers For Sale | Callaway Outdoors Felton Delaware"><meta property="og:description" content="${esc(desc)}">
   <meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(photo[0] || DOMAIN+'/assets/callaway_outdoors_site_logo.png')}">
   <link rel="stylesheet" href="/css/styles.css"><script type="application/ld+json">${schema(product)}</script></head>
-  <body>${SITE_HEADER}<main>${body}</main>${SITE_FOOTER}<script src="/js/gallery.js" defer></script></body></html>`;
+  <body>${SITE_HEADER}<main>${body}</main>${SITE_FOOTER}<script src="/js/payment.js?v=seo-v3"></script><script>if(window.CallawayPayment){document.getElementById("seoEstimatedPayment").innerHTML=window.CallawayPayment.estimate(${Number(u.price)||0});document.getElementById("seoPaymentCalculator").innerHTML=window.CallawayPayment.calculator(${Number(u.price)||0});window.CallawayPayment.bind(document);}</script><script src="/js/gallery.js" defer></script></body></html>`;
 }
 export function renderSitemap(items) {
   const urls = [...STATIC_PAGES.map(path => DOMAIN + path), ...items.map(urlFor)];
