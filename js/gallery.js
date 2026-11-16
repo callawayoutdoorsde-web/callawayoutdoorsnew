@@ -7,5 +7,7 @@
     main.addEventListener('touchstart',e=>{startX=e.changedTouches[0].clientX},{passive:true}); main.addEventListener('touchend',e=>{if(startX===null)return;const dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>45)show(active+(dx<0?1:-1));startX=null},{passive:true});
     root.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(active-1);if(e.key==='ArrowRight')show(active+1)}); show(0);
   }
-  document.addEventListener('DOMContentLoaded',()=>document.querySelectorAll('[data-gallery]').forEach(init));
+  const initialize=()=>document.querySelectorAll('[data-gallery]:not([data-gallery-initialized])').forEach(el=>{el.setAttribute('data-gallery-initialized','true');init(el)});
+  document.addEventListener('DOMContentLoaded',initialize);
+  document.addEventListener('callaway:gallery-ready',initialize);
 })();
