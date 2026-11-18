@@ -1,0 +1,18 @@
+Callaway Outdoors SEO/content/mobile inventory upgrade
+
+Added:
+- Facebook-style no-emoji sales copy on live server-rendered camper pages.
+- Automatic fallback copy for new DealerCenter units.
+- Highlights and Why Callaway blocks on individual camper pages.
+- SEO titles: YEAR MAKE MODEL For Sale in Delaware | Callaway Outdoors.
+- Breadcrumbs and internal links.
+- 4 category pages, 4 local-area pages, and 4 RV service SEO pages.
+- Dynamic sitemap includes all new pages.
+- Mobile inventory changed to a compact 2-column layout so roughly four units are visible at once.
+
+Preserved:
+- DealerCenter/SFTP inventory logic
+- Clean /inventory/<slug>.html routes
+- Payment estimates and calculator
+- Photo galleries
+- Mobile homepage featured inventory behavior
