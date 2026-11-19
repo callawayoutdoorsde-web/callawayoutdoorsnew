@@ -1,0 +1,9 @@
+CALLAWAY OUTDOORS — CALL & TEXT UPDATE ONLY
+
+This ZIP contains only 22 top-level HTML pages, the shared stylesheet(s), and the Netlify server-rendered camper template. It does NOT contain photos, DealerCenter integration, inventory data, or other website assets.
+
+GitHub web uploader: open the correct repository, then upload the .html files in the repository root (can be split into batches). For files in css/, navigate into css/ before uploading. For netlify/functions/lib/_seo-render.mjs, navigate into netlify/functions/lib/ and replace that file. Commit each batch. Do not upload this ZIP as a ZIP file to the repo.
+
+If GitHub asks to overwrite existing files, use the normal replace/update workflow. Keep all other files unchanged.
+
+After deployment test mobile Call (302-640-5353) and Text (302-271-7045), and verify the mobile inventory remains two columns.
